@@ -10,3 +10,9 @@ def get_num_char(text):
             num_char[char] = 1
     return num_char
 
+def sort_char(num_char):
+    sorted_char = []
+    for key, value in num_char.items():
+        sorted_char.append({"char": key, "num": value})
+    sorted_char.sort(reverse=True, key = lambda dict: dict["num"])
+    return sorted_char
